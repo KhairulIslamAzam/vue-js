@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
+    <!-- el and data property -->
     <!-- <div id="app">
         <h3>{{title}}</h3>
         <p>{{version}}</p>
@@ -16,8 +17,118 @@
         <p>{{hellowMethod()}}</p>
     </div> -->
 
-    <div id="app">
-        
+    <!-- methods calls -->
+    <!-- <div id="app">
+        <h2>{{grettings()}}</h2>
+    </div> -->
+
+    <!-- v-bind example -->
+    <!-- <div id="app">
+        <div class="col">
+            <p v-text="name"></p>
+            <p v-html="age"></p>
+        </div>
+        <div class="col">
+            <img v-bind:src=image :alt=alt width="100px" height="100px">
+        </div>
+    </div> -->
+
+     <!-- conditional statemnet example  -->
+     <!-- <div id="app">
+        <div class="col">
+            <p v-if="number%2 === 0">
+                Even number
+            </p>
+            <p v-else-if="number%2 !== 0">Odd number</p>
+            <p v-else>WRONG FORMAT!!!</p>
+        </div>
+    </div> -->
+
+     <!-- v-show statemnet example  -->
+     <!-- <div id="app">
+        <div class="col">
+            <p v-show="userName === changeUser()">
+                user name: {{changeUser()}}
+            </p>
+            
+            <p v-show="userName !== changeUser()"> Name not found</p>
+        </div>
+    </div> -->
+
+     <!-- v-for statemnet example -->
+     <!-- <div id="app">
+        <div class="col">
+            <p v-for="(car, index) in cars">
+                {{index}}: {{car}}
+            </p>
+    
+            <p v-for="(value, key, index) in numbers">
+               {{index}}: {{key}} => {{value}} 
+            </p>
+        </div>
+    </div> -->
+
+    <!-- v-once statemnet example -->
+     <!-- <div id="app">
+        <div class="col">
+            <h3>{{name}}</h3>
+            <h3 v-once>{{name}}</h3>
+           {{update()}}
+        </div>
+    </div> -->
+
+    <!-- v-on statemnet example -->
+     <!-- <div id="app">
+        <div class="col">
+           <p>{{name}}</p>
+           <button v-on:click="update">click</button>
+        </div>
+    </div> -->
+
+    <!-- v-on statemnet example -->
+    <!-- <div id="app">
+        <div class="col">
+           <p>{{name}}</p>
+           <button v-on:click="update('khairul', $event)">click</button>
+        </div>
+    </div> -->
+
+    <!-- v-on modifier example -->
+    <!-- <div id="app">
+        <div class="col">
+           <p>{{name}}</p>
+           <button v-on:click.right="update('khairul', $event)">click</button>
+        </div>
+    </div> -->
+
+    <!-- prevent defualt in js -->
+    <!-- <div id="app">
+        <form v-on:click.prevent>
+            <input type="text" placeholder="input your user name">
+            <button type="submit">click</button>
+        </form>
+    </div> -->
+    
+    <!-- v-model example -->
+    <!-- <div id="app">
+        <form v-on:click.prevent="handleForm">
+            <input type="text" placeholder="input your user name" v-model="formData.firstName">
+            <input type="text" placeholder="input your user name" v-model="formData.lastName">
+            <button type="submit">click</button>
+        </form>
+    </div> -->
+
+    <!-- computed property and shortland -->
+    <div class="" id="app">
+        <button @click="a++">a click</button>
+        <button @click="b++">b click</button>
+
+        <p>
+            a: {{a}}
+            b: {{b}}
+            salary of a: {{calculate_Salary_a}}
+            salary of b: {{calculate_Salary_b}}
+        </p>
     </div>
 <script src="app.js"></script>
 </body>
